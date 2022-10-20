@@ -1,0 +1,30 @@
+.products {
+    display: none;
+    padding-top: 0;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+}
+
+.products__gallery {
+    display: flex;
+    gap: 30px;
+}
+
+.products__item {
+    position: relative;
+}
+
+.products__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 0;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white-color;
+    background: $transparent-grey-background;
+}

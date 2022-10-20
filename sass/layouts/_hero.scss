@@ -1,0 +1,15 @@
+.hero {
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, .4),
+            rgba(47, 48, 58, .4)),
+        url('../images/solutions_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $dark-background;
+    margin: 0 auto;
+    text-align: center;
+    padding: 200px 0;
+}
