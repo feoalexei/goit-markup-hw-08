@@ -1,0 +1,90 @@
+.mob-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white-color;
+    padding: 48px 25px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mob__nav {
+    flex-grow: 1;
+    color: $dark-color;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &-link {
+        transition: color $main-transition;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+}
+
+.mob__contacts {
+    color: $grey-color;
+    margin-bottom: 64px;
+}
+
+.mob__contact-item {
+}
+
+.mob__contact-link {
+    font-size: 34px;
+    line-height: 1.18;
+    display: block;
+
+    &-link {
+        transition: color $main-transition;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+
+    &[href^='mailto'] {
+        color: $accent-color;
+        margin-bottom: 32px;
+    }
+
+    &[href^='tel'] {
+        font-size: 24px;
+        line-height: 1.17;
+    }
+}
+
+.mob__social {
+    display: flex;
+
+    &-item {
+        padding: 0 10px;
+    }
+
+    &-item:first-child {
+        padding-left: 0;
+    }
+
+    &-item:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &-link {
+        color: $accent-color;
+    }
+}
