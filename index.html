@@ -22,10 +22,10 @@
         <header class="header">
             <div class="container header__container">
                 <nav class="nav">
-                    <!-- <a class="logo nav__logo" href="index.html"
+                    <a class="logo nav__logo" href="index.html"
                         ><span>Web</span>Studio</a
-                    > -->
-                    <!-- <ul class="nav__menu">
+                    >
+                    <ul class="nav__menu">
                       <li class="nav__item">
                         <a class="nav__link nav__link--current" href="index.html"
                           >Студія</a
@@ -37,9 +37,9 @@
                       <li class="nav__item">
                         <a class="nav__link" href="#">Контакти</a>
                       </li>
-                    </ul> -->
+                    </ul>
                 </nav>
-                <!-- <ul class="header__contacts">
+                <ul class="header__contacts">
                     <li>
                       <a class="header__contact-link" href="mailto:info@devstudio.com">
                         <svg class="contact-link__icon" width="16" height="12">
@@ -54,8 +54,19 @@
                         >+38 096 111 11 11</a
                       >
                     </li>
-                </ul> -->
-                <div class="mob-menu">
+                </ul>
+
+                <!-- Burger button-->
+                <button class="menu-toggle js-open-menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu">
+                    <svg width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-burger"></use>
+                    </svg>
+                </button>
+
+                <!-- Mobile menu-->
+                <div class="mob-menu js-mob-menu">
                     <ul class="mob__nav">
                         <li class="mob__nav-item">
                             <a
@@ -101,6 +112,12 @@
                             <a class="mob__social-link" href="">LinkedIn</a>
                         </li>
                     </ul>
+    
+                    <button class="menu-toggle js-close-menu">
+                        <svg width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-close"></use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </header>
@@ -113,7 +130,7 @@
                         Ефективні рішення для вашого бізнесу
                     </h1>
                     <button
-                        class="btn btn--main-btn btn--centered"
+                        class="btn hero__btn btn--main-btn btn--centered"
                         type="button"
                         data-modal-open
                     >
@@ -680,7 +697,7 @@
         <!-- Modal-->
         <div class="modal-backdrop is-hidden" data-modal>
             <div class="modal">
-                <button class="modal__close-btn" data-modal-close>
+                <button class="close-btn modal__close-btn" data-modal-close>
                     <svg width="11" height="11">
                         <use href="./images/symbol-defs.svg#icon-close"></use>
                     </svg>
@@ -791,7 +808,7 @@
                     </div>
 
                     <button
-                        class="btn btn--main-btn btn--centered"
+                        class="btn modal__submit-btn btn--main-btn btn--centered"
                         type="submit"
                     >
                         Відправити
@@ -801,5 +818,6 @@
         </div>
 
         <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

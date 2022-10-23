@@ -29,6 +29,12 @@
     margin: 0 auto;
 }
 
+.hero__btn {
+    @media screen and (max-width: 1199px) {
+        padding: 10px 24px;
+    }
+}
+
 .portfolio__btn {
     font-weight: 500;
     line-height: 1.6;
@@ -46,16 +52,12 @@
     }
 }
 
-.modal__close-btn {
+.close-btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
     width: 30px;
     height: 30px;
     background-color: #fff;
     border-color: $white-color;
-    border-radius: 50%;
-    border: 1px solid $weaker-black-color;
     fill: $black-color;
     padding: 0;
     cursor: pointer;
@@ -65,5 +67,39 @@
     &:focus {
         fill: $accent-color;
         outline: none;
+    }
+}
+
+.modal__close-btn {
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    border: 1px solid $weaker-black-color;
+}
+
+.modal__submit-btn {
+    padding: 10px 52px;
+}
+
+.menu-toggle {
+    min-width: 40px;
+    min-height: 40px;
+    @extend %flex-centered;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+        outline: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
